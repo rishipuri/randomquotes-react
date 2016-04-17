@@ -1,0 +1,19 @@
+{
+  "name": "randomquotes-react",
+  "version": "1.0.0",
+  "description": "Random Quotes App built with React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishipuri/randomquotes-react.git"
+  },
+  "author": "rishipuri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishipuri/randomquotes-react/issues"
+  },
+  "homepage": "https://github.com/rishipuri/randomquotes-react#readme"
+}
