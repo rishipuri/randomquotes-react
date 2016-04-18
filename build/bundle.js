@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "98b816b2719375309305"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "4a750ffc038355f624d6"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -20567,6 +20567,9 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.default = undefined;
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
@@ -20578,17 +20581,77 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.default = function () {
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement(
-	      'h1',
-	      null,
-	      'hello world!'
-	    )
-	  );
-	};
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var App = function (_React$Component) {
+	  _inherits(App, _React$Component);
+
+	  function App(props) {
+	    _classCallCheck(this, App);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
+
+	    _this.getRandom = function () {
+	      var newrand = Math.floor(Math.random() * (_this.state.quotes.length - 0) + 0);
+
+	      _this.setState({
+	        randomquote: newrand
+	      });
+	    };
+
+	    _this.state = {
+	      quotes: [{
+	        quote: 'What I cannot create, I do not understand.',
+	        author: 'Richard Feynman'
+	      }, {
+	        quote: 'Nothing could be worse than the fear that one had given up too soon, and left one unexpended effort that might have saved the world.',
+	        author: 'Jane Addams'
+	      }, {
+	        quote: 'If you accept the expectations of others, especially negative ones, then you never will change the outcome.',
+	        author: 'Michael Jordan'
+	      }, {
+	        quote: 'We make our own fortunes and we call them fate.',
+	        author: 'Benjamin Disraeli'
+	      }],
+	      randomquote: 0
+	    };
+	    return _this;
+	  }
+
+	  _createClass(App, [{
+	    key: 'render',
+	    value: function render() {
+
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'quote' },
+	          this.state.quotes[this.state.randomquote].quote
+	        ),
+	        _react2.default.createElement(
+	          'p',
+	          { className: 'author' },
+	          this.state.quotes[this.state.randomquote].author
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onClick: this.getRandom },
+	          'New Quote'
+	        )
+	      );
+	    }
+	  }]);
+
+	  return App;
+	}(_react2.default.Component);
+
+	exports.default = App;
 
 /***/ },
 /* 167 */
