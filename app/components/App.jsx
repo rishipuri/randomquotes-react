@@ -39,6 +39,7 @@ export default class App extends React.Component {
 
     return (
       <div>
+        <h1>Random Quote Machine</h1>
         <p className='quote'>{ this.state.quotes[this.state.randomquote].quote }</p>
         <p className='author'>{ this.state.quotes[this.state.randomquote].author }</p>
         <button onClick={this.getRandom}>New Quote</button>
